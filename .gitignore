@@ -1,5 +1,6 @@
 # Prerequisites
 *.d
+token.txt
 
 # Compiled Object files
 *.slo
