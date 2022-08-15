@@ -4,13 +4,19 @@ using namespace std;
 int main()
 {
   int n;
-  cin >> n; // 10
+  cin >> n;
+  int flag{0};
 
-  for (int i = 0; i < n; i++) // for ([initialExpression]; [conditionExpression]; [incrementExpression])
+  for (int i = 2; i <= n / 2; i++)
   {
-    i++;       // 0, 1, 2, 3, 4
-    cout << i << endl; // 1, 2, 3, 4, 5
+    if (n % i == 0)
+    {
+      cout << "not a prime number" << endl;
+      flag = 1;
+      break;
+    }
   }
-
+  if (flag == 0)
+    cout << "prime number" << endl;
   return 0;
 }
